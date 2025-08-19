@@ -1,24 +1,145 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Almeerweten – ICT hulp</title>
-  <link rel="stylesheet" href="./styles.css"><!-- optioneel -->
+  <link rel="stylesheet" href="./styles.css" />
+  <meta name="description" content="Snelle start voor collega's: OneDrive, Teams, AFAS, Foleta, Wolf, Classroomscreen en printen." />
 </head>
 <body>
-  <header class="container">
-    <h1>Almeerweten</h1>
-    <p class="tagline">Snel aan de slag met ICT-tools</p>
+  <header class="site-header">
+    <div class="container">
+      <h1>Almeerweten</h1>
+      <p class="tagline">Snelle ICT-hulp & handleidingen voor collega’s</p>
+      <nav class="top-nav">
+        <a href="#onedrive">OneDrive</a>
+        <a href="#printen">Printen</a>
+        <a href="#teams">Teams</a>
+        <a href="#foleta">Foleta</a>
+        <a href="#afas">AFAS</a>
+        <a href="#wolf">Wolf</a>
+        <a href="#classroomscreen">Classroomscreen</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <!-- PLAK HIER JOUW SECTIES -->
-    <!-- ▼▼ jouw code ▼▼ -->
-    <!-- ... jouw <section id="onedrive"> ... t/m ... </section> -->
-    <!-- ▲▲ jouw code ▲▲ -->
+  <main class="container stack">
+    <!-- JOUW SECTIES (ongewijzigd) -->
+    <section id="onedrive">
+      <div class="card">
+        <h2>OneDrive — veilig bewaren &amp; delen</h2>
+        <p class="section-note">OneDrive is de veilige plek voor je bestanden: maak duidelijke <b>mappen</b>, <b>upload</b> snel en <b>deel</b> met de juiste <b>rechten</b>.</p>
+        <div class="tabs"></div>
+        <p class="hint"><span class="kicker">Tip</span>Klik op <i>Inloggen</i>, <i>Mappen</i>, <i>Uploaden</i> of <i>Delen</i> om de stappen te zien.</p>
+        <div class="flow" data-scope="onedrive core" data-model="onedrive"></div>
+        <p class="actions">
+          <a class="btn" href="https://office.com" target="_blank" rel="noopener">Open OneDrive</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="printen">
+      <div class="card">
+        <h2>Printen — Ricoh FollowMe</h2>
+        <p class="section-note">Stuur je print naar <b>FollowMe</b> en haal hem op bij een Ricoh-printer. Koppelen van je tag/druppel is eenmalig.</p>
+        <div class="tabs"></div>
+        <p class="hint"><span class="kicker">Tip</span>Kies <i>Printen</i> en volg de stappen.</p>
+        <div class="flow" data-scope="printen core" data-model="printen"></div>
+        <p class="actions">
+          <a class="btn" href="https://almerecollege.sharepoint.com/sites/RicohPrinters/_layouts/15/download.aspx?SourceUrl=%2Fsites%2FRicohPrinters%2FGedeelde%20documenten%2FOne-Page%20Tag%20koppelen%20Ricoh%20A3.pdf" target="_blank" rel="noopener" download data-top="1">Tag koppelen (PDF)</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="teams">
+      <div class="card">
+        <h2>Teams — samenwerken & vergaderen</h2>
+        <p class="section-note">Teams is voor samenwerken, chat en bestanden delen — denk aan <b>tijdverlenging</b>, <b>leerlingnotities</b>, <b>LOC/vergaderingen</b> en ander lesmateriaal.</p>
+        <div class="tabs"></div>
+        <p class="hint"><span class="kicker">Tip</span>Kies <i>Inloggen</i>, <i>Vergadering</i>, <i>Team maken</i> of <i>Bestanden</i> om de stappen te zien.</p>
+        <div class="flow" data-scope="teams core" data-model="teams"></div>
+        <p class="actions">
+          <a class="btn" href="https://teams.microsoft.com/" target="_blank" rel="noopener">Open Teams</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="foleta">
+      <div class="card">
+        <h2>Foleta — roosterwensen & PB-uren</h2>
+        <p class="section-note">Foleta verzamelt jaarlijks je <b>roosterwensen</b>, <b>PB-uren</b> en eventuele <b>lesreductie</b> via formulieren (januaribrief).</p>
+        <div class="tabs"></div>
+        <p class="hint"><span class="kicker">Tip</span>Kies <i>Inloggen</i>, <i>Roosterwensen</i> of <i>PB-uren / Lesreductie</i>.</p>
+        <div class="flow" data-scope="foleta core" data-model="foleta"></div>
+        <p class="actions">
+          <a class="btn" href="https://inloggen.foleta.nl/" target="_blank" rel="noopener">Open Foleta</a>
+          <a class="btn alt" href="https://cdn.foleta.nl/files/gebruikersdag-2019/Presentatie_De_geautomatiseerde_januaribrief.pdf" target="_blank" rel="noopener">Januaribrief (PDF)</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="afas">
+      <div class="card">
+        <h2>AFAS InSite — verlof, declaraties & gegevens</h2>
+        <p class="section-note">AFAS InSite regelt je personeelszaken: vraag <b>verlof</b> aan, dien <b>declaraties</b> in en beheer <b>mijn gegevens</b> na het <b>inloggen</b>.</p>
+        <div class="tabs"></div>
+        <p class="hint"><span class="kicker">Tip</span>Kies <i>Inloggen</i>, <i>Verlof</i>, <i>Declaratie</i> of <i>Mijn gegevens</i>.</p>
+        <div class="flow" data-scope="afas core" data-model="afas"></div>
+        <p class="actions">
+          <a class="btn" href="https://www.afas.nl/" target="_blank" rel="noopener">Open AFAS InSite</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="wolf">
+      <div class="card">
+        <h2>Wolf — examenresultaten doorgeven</h2>
+        <p class="section-note">Wolf is het Cito-portaal voor examenafhandeling: voer <b>scores</b> in, doe <b>tweede correctie</b> en maak <b>export/rapportage</b>.</p>
+        <div class="tabs"></div>
+        <p class="hint"><span class="kicker">Tip</span>Kies <i>Inloggen</i>, <i>Scores invoeren</i>, <i>Tweede correctie</i> of <i>Export & rapportage</i>.</p>
+        <div class="flow" data-scope="wolf core" data-model="wolf"></div>
+        <p class="actions">
+          <a class="btn" href="https://wolf.cito.nl" target="_blank" rel="noopener">Open Wolf</a>
+          <a class="btn alt" href="https://cito.nl/media/nook0txm/wolf_handleiding_examinator.pdf" target="_blank" rel="noopener">Handleiding examinator (PDF)</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="classroomscreen">
+      <div class="card">
+        <h2>Classroomscreen — tools voor in de klas</h2>
+        <p class="section-note">Classroomscreen biedt praktische klassentools als <b>timer</b>, <b>stoplicht/geluidsmeter</b>, <b>QR</b> en <b>tekst</b> om instructies helder te tonen.</p>
+
+        <div class="disclaimer">
+          <span class="label">Let op</span>: voor een Pro-licentie van Classroomscreen, mail
+          <a href="mailto:servicedesk@almerecollege.nl?subject=Classroomscreen%20%E2%80%94%20aanvraag%20Pro-licentie&body=Hoi%20Servicedesk%2C%0D%0A%0D%0AGraag%20een%20Pro-licentie%20voor%20Classroomscreen.%0D%0ANaam%3A%20%0D%0AAfkorting%3A%20%0D%0ALocatie%3A%20Copernicus%0D%0AAccount%20(%40almerecollege.nl)%3A%20">servicedesk@almerecollege.nl</a>.
+        </div>
+
+        <div class="tabs"></div>
+        <p class="hint"><span class="kicker">Tip</span>Kies <i>Inloggen</i>, <i>Nieuw scherm</i>, <i>Widgets</i> of <i>Delen</i>.</p>
+
+        <div class="embed-card dismissible" id="cs-lic-alert" aria-live="polite">
+          <button class="alert-close" type="button" aria-label="Sluiten">×</button>
+          <b>Let op (licentie):</b> Wil je je schermen kunnen opslaan? Vraag eerst een <i>Pro-licentie</i> aan via
+          <a href="mailto:servicedesk@almerecollege.nl?subject=Classroomscreen%20%E2%80%94%20aanvraag%20Pro-licentie&body=Hoi%20Servicedesk%2C%0D%0A%0D%0AGraag%20een%20Pro-licentie%20voor%20Classroomscreen.%0D%0ANaam%3A%20%0D%0AAfkorting%3A%20%0D%0ALocatie%3A%20Copernicus%0D%0AAccount%20(%40almerecollege.nl)%3A%20">servicedesk@almerecollege.nl</a>. De gratis versie kun je altijd gebruiken.
+        </div>
+
+        <div class="flow" data-scope="classroomscreen core" data-model="classroomscreen"></div>
+        <p class="actions">
+          <a class="btn" href="https://classroomscreen.com" target="_blank" rel="noopener">Open Classroomscreen</a>
+        </p>
+      </div>
+    </section>
   </main>
 
-  <script src="./app.js"></script><!-- optioneel voor tabs/flows -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© Almere College – Almeerweten</p>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
 </body>
 </html>
