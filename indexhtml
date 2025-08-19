@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Almeerweten – ICT hulp</title>
+  <link rel="stylesheet" href="./styles.css"><!-- optioneel -->
+</head>
+<body>
+  <header class="container">
+    <h1>Almeerweten</h1>
+    <p class="tagline">Snel aan de slag met ICT-tools</p>
+  </header>
+
+  <main>
+    <!-- PLAK HIER JOUW SECTIES -->
+    <!-- ▼▼ jouw code ▼▼ -->
+    <!-- ... jouw <section id="onedrive"> ... t/m ... </section> -->
+    <!-- ▲▲ jouw code ▲▲ -->
+  </main>
+
+  <script src="./app.js"></script><!-- optioneel voor tabs/flows -->
+</body>
+</html>
