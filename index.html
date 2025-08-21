@@ -253,6 +253,20 @@
   #mobileSearchPanel form.tool-clone{ display:flex; gap:.5rem; }
   #mobileSearchPanel input[type="search"]{ flex:1 1 auto; min-width:0; }
 }
+</style><style>
+/* Scoped: shorten only the quick-links tile label on mobile */
+@media (max-width: 680px){
+  .quick-links a.app[href="#classroomscreen"] span{
+    position: relative;
+    visibility: hidden;
+  }
+  .quick-links a.app[href="#classroomscreen"] span::after{
+    content: "Classroomscr.";
+    position: absolute;
+    inset: 0;
+    visibility: visible;
+  }
+}
 </style></head><body><header><div class="container topbar"><div class="brand"><div aria-label="AC ICT logo" class="brand-mark"><svg class="brand-logo" role="img" viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><filter id="glow"><fegaussianblur result="b" stddeviation="10"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter></defs><rect fill="none" height="200" rx="24" ry="24" width="200"></rect><g filter="url(#glow)"><path d="M60 150 L90 50 L110 50 L140 150 L120 150 L112 125 L88 125 L80 150 Z M94 108 L106 108 L100 88 Z" fill="#21876e"></path></g><g transform="rotate(-6 130 140)"><rect fill="#ff333d" height="36" rx="6" ry="6" width="90" x="95" y="120"></rect><text fill="#ffeaea" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="800" text-anchor="middle" x="140" y="145">ICT</text></g></svg></div><div><div class="brand-title">Almere College · Copernicus</div><div class="brand-sub">Digitale Startgids</div></div></div><nav aria-label="Zoeken"><form class="search desktop-only desktop-only desktop-control" id="site-search" role="search"><button aria-label="Zoeken" type="submit"><svg fill="none" height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"></circle><path d="M20 20L16.5 16.5" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path></svg></button><input aria-label="Zoeken in gids" id="q" placeholder="zoeken" type="search"/></form><div class="mobile-tools-panel" id="mobileTools"></div><button aria-expanded="false" aria-label="Open zoeken" class="lang-toggle" id="mobileSearchToggle" type="button">🔍</button></nav></div></header><div aria-hidden="true" id="mobileSearchPanel"><div class="search-panel-inner container"></div></div><main><button aria-label="Naar boven" class="to-top" id="toTop" title="Naar boven"><svg fill="none" height="20" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12 5l-6 6M12 5l6 6M12 5v14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></button><section class="hero"><div class="container"><h1>Welkom! Alles wat je als nieuwe collega digitaal nodig hebt.</h1><p class="subtitle">Voor inhoudelijke vragen die hier niet beantwoord zijn, neem contact op met <a href="mailto:servicedesk@almerecollege.nl">servicedesk@almerecollege.nl</a>.</p><div aria-label="Snelkoppelingen" class="quick-links"><a class="app" href="#magister"><div class="dot" style="background:var(--p)"></div><span>Magister</span></a><a class="app" href="#outlook"><div class="dot" style="background:var(--g)"></div><span>Outlook</span></a><a class="app" href="#onedrive"><div class="dot" style="background:var(--l)"></div><span>OneDrive</span></a><a class="app" href="#printen"><div class="dot" style="background:#cfcfcf"></div><span>Printen</span></a><a class="app" href="#teams"><div class="dot" style="background:var(--y)"></div><span>Teams</span></a><a class="app" href="#foleta"><div class="dot" style="background:#9aa"></div><span>Foleta</span></a><a class="app" href="#afas"><div class="dot" style="background:var(--r)"></div><span>AFAS InSite</span></a><a class="app" href="#classroomscreen"><div class="dot" style="background:var(--pk)"></div><span>Classroomscreen</span></a><a class="app" href="#wolf"><div class="dot" style="background:var(--k)"></div><span>Wolf</span></a></div></div></section><section id="magister"><div class="container card"><h2>Magister — cijfers, absenties &amp; studiewijzers</h2><p class="section-note">Magister is het leerlingvolgsysteem: voer <b>cijfers</b> in, registreer <b>absentie</b>, beheer <b>studiewijzers</b> en communiceer via <b>berichten</b>.</p><div class="tabs"></div><p class="hint"><span class="kicker">Tip</span>Kies <i>Inloggen</i>, <i>Cijfers</i>, <i>Absentie</i>, <i>Studiewijzer</i>, <i>Bronnen</i>, <i>Opdrachten</i>, <i>Herkansingskolom</i>, <i>Toets Inhalen</i>, <i>Huiswerk toevoegen</i> of <i>Berichten</i>.</p><div class="flow" data-model="magister" data-scope="magister core"></div><p class="actions"><a class="btn" href="https://almerecollege.magister.net/">Open Magister</a><span class="tab-extra" data-topic="inloggen"><a class="btn" href="https://almerecollege-my.sharepoint.com/:b:/g/personal/yvr_almerecollege_nl/EVZXZkE33-xNv2ePASVyNswBvxmPI44M_eA6kBAipvo1Cw?e=kXjXLHV">Uitleg (PDF)</a></span><span class="tab-extra" data-topic="cijfers"><a class="btn" href="https://almerecollege-my.sharepoint.com/:b:/g/personal/yvr_almerecollege_nl/ESpcMFV28JVCqyJu926odxcBzAJzvZLKjZAY2-c26HcaRA?e=gumBUy">Cijfers invoeren (PDF)</a></span><span class="tab-extra" data-topic="studiewijzer"><a class="btn" href="https://almerecollege-my.sharepoint.com/:b:/g/personal/yvr_almerecollege_nl/EYXGIdL_F11Po83GcSbTXswBrefnPSTfdQbn4wh3U8D54w?e=t3xwVM">Studiewijzer toevoegen (PDF)</a></span><span class="tab-extra" data-topic="berichten"><a class="btn" href="https://almerecollege-my.sharepoint.com/:b:/g/personal/yvr_almerecollege_nl/EaryWodCURJOhAJog--g-OoBa7rca7Sk0MAstYdoOfA2ww?e=0gvJXK">Berichten (PDF)</a></span><span class="tab-extra" data-topic="bronnen"><a class="btn" href="https://almerecollege-my.sharepoint.com/:b:/g/personal/yvr_almerecollege_nl/Ecq1OOUkKMtBhfLyDnFIRIIB9-arl8c7jRYiy6c74FIFGQ?e=YvNxDb">Bronnen &amp; licenties (PDF)</a></span><a class="btn alt" href="https://almerecollege-my.sharepoint.com/:v:/g/personal/yvr_almerecollege_nl/ERzNGsixqoVJsxkUREvPL-ABj2r0vzJujGsz_fgwPRXlEQ?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmVsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&amp;e=uEl1fZ">🎥 Open video</a></p></div></section>
 <section id="outlook"><div class="container card"><h2>Outlook — mail &amp; agenda</h2><p class="section-note">Outlook is je dagelijkse hub voor <b>e‑mail</b> en <b>agenda</b>: zet je <b>handtekening</b> goed, orden met <b>mappen</b> en <b>regels</b>, en plan <b>Teams‑vergaderingen</b>.</p><div class="tabs"></div><div class="flow" data-model="outlook" data-scope="outlook core"></div><p class="actions"><a class="btn" href="https://outlook.office.com/mail/">Open Outlook</a><a class="btn alt" href="https://almerecollege-my.sharepoint.com/:v:/g/personal/yvr_almerecollege_nl/EXqlxa8Ca1NMkoQ-gX9WntcBsjstk4QVsjJTtqfqnZHqrw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmVsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&amp;e=C1w6qx">🎥 Open video</a></p></div></section>
 <section id="onedrive"><div class="container card"><h2>OneDrive — veilig bewaren &amp; delen</h2><p class="section-note">OneDrive is de veilige plek voor je bestanden: maak duidelijke <b>mappen</b>, <b>upload</b> snel en <b>deel</b> met de juiste <b>rechten</b>.</p><div class="tabs"></div><div class="flow" data-model="onedrive" data-scope="onedrive core"></div><p class="actions"><a class="btn" href="https://office.com">Open OneDrive</a></p></div></section>
@@ -317,36 +331,4 @@ document.addEventListener('DOMContentLoaded', function(){
     if(!isMobile()) closePanel();
   }, {passive:true});
 });
-</script><script>
-// shorten-classroomscreen-mobile (with trailing dot)
-(function(){
-  function isMobile(){ return window.matchMedia('(max-width: 680px)').matches; }
-  function swap(toShort){
-    var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
-    var nodes = [];
-    while(walker.nextNode()){
-      var n = walker.currentNode;
-      var t = (n.nodeValue || '');
-      if(/Classroomscreen/i.test(t) || /Classroomscr\./i.test(t)){
-        nodes.push(n);
-      }
-    }
-    nodes.forEach(function(n){
-      var t = n.nodeValue;
-      if(toShort){
-        // Full -> Short with dot
-        t = t.replace(/Classroomscreen/gi, 'Classroomscr.');
-      }else{
-        // Short with dot -> Full
-        t = t.replace(/Classroomscr\./gi, 'Classroomscreen');
-      }
-      n.nodeValue = t;
-    });
-  }
-  function apply(){
-    if(isMobile()) swap(true); else swap(false);
-  }
-  document.addEventListener('DOMContentLoaded', apply);
-  window.addEventListener('resize', apply, {passive:true});
-})();
 </script></body></html>
