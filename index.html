@@ -276,44 +276,42 @@
 <section id="afas"><div class="container card"><h2>AFAS InSite — verlof, declaraties &amp; gegevens</h2><p class="section-note">AFAS InSite regelt je personeelszaken: vraag <b>verlof</b> aan, dien <b>declaraties</b> in en beheer <b>mijn gegevens</b> na het <b>inloggen</b>.</p><div class="tabs"></div><div class="flow" data-model="afas" data-scope="afas core"></div><p class="actions"><a class="btn" href="https://www.afas.nl/">Open AFAS InSite</a></p></div></section>
 <section id="wolf"><div class="container card"><h2>Wolf — examenresultaten doorgeven</h2><p class="section-note">Wolf is het Cito‑portaal voor examenafhandeling: voer <b>scores</b> in, doe <b>tweede correctie</b> en maak <b>export/rapportage</b>.</p><div class="tabs"></div><div class="flow" data-model="wolf" data-scope="wolf core"></div><p class="actions"><a class="btn" href="https://wolf.cito.nl">Open Wolf</a><a class="btn alt" href="https://cito.nl/media/nook0txm/wolf_handleiding_examinator.pdf">Handleiding examinator (PDF)</a></p></div></section>
 <section id="classroomscreen"><div class="container card"><h2>Classroomscreen — tools voor in de klas</h2><p class="section-note">Classroomscreen biedt praktische klassentools als <b>timer</b>, <b>stoplicht/geluidsmeter</b>, <b>QR</b> en <b>tekst</b> om instructies helder te tonen.</p><div class="disclaimer"><span class="label">Let op</span>: voor een Pro‑licentie van Classroomscreen, mail <a href="mailto:servicedesk@almerecollege.nl">servicedesk@almerecollege.nl</a>.</div><div class="tabs"></div><div aria-live="polite" class="embed-card dismissible" id="cs-lic-alert"><button aria-label="Sluiten" class="alert-close" type="button">×</button><b>Let op (licentie):</b> Wil je je schermen kunnen opslaan? Vraag eerst een <i>Pro-licentie</i> aan via <a href="mailto:servicedesk@almerecollege.nl">servicedesk@almerecollege.nl</a>. De gratis versie kun je altijd gebruiken.</div><script>!function(){try{var k='ac-classroomscreen-lic-dismissed',e=document.getElementById('cs-lic-alert');if(!e)return;'1'===localStorage.getItem(k)&&(e.style.display='none');var b=e.querySelector('.alert-close');b&&b.addEventListener('click',function(){var w=this.closest('.dismissible');w&&(w.style.display='none',localStorage.setItem(k,'1'))})}catch(c){}}();</script><div class="flow" data-model="classroomscreen" data-scope="classroomscreen core"></div><p class="actions"><a class="btn" href="https://classroomscreen.com">Open Classroomscreen</a></p></div></section>
-</main><script>
-// mobile search dropdown v4: equal spacing + button feedback
+</main><script>// mobile search dropdown v9: reuse original form (move in/out so handlers work)
 document.addEventListener('DOMContentLoaded', function(){
   var toggle = document.getElementById('mobileSearchToggle');
   var panel  = document.getElementById('mobileSearchPanel');
   if(!toggle || !panel) return;
 
   var inner = panel.querySelector('.search-panel-inner');
+  var form  = document.getElementById('site-search');      // ORIGINAL form (has all handlers)
+  if(!inner || !form) return;
+
+  var originalParent = form.parentElement;
+  var originalNext   = form.nextSibling; // remember position to restore
+
   function isMobile(){ return window.matchMedia('(max-width: 680px)').matches; }
 
-  function buildOnce(){
-    if(panel.dataset.ready === '1') return;
-    inner.innerHTML = '';
-
-    var search = document.getElementById('site-search');
-    if(search){
-      var s = search.cloneNode(true);
-      s.classList.add('tool-clone');
-      s.addEventListener('submit', function(e){ e.preventDefault(); });
-      inner.appendChild(s);
-    }
-    panel.dataset.ready = '1';
-  }
-
   function openPanel(){
-    buildOnce();
+    // Move the ORIGINAL form into the panel so its listeners keep working
+    inner.appendChild(form);
     panel.classList.add('open');
     toggle.classList.add('active');
     toggle.setAttribute('aria-expanded','true');
-    toggle.setAttribute('aria-pressed','true');
     document.addEventListener('click', outsideClose);
     document.addEventListener('keydown', escClose);
+    // Focus input
+    var q = form.querySelector('input[type="search"], input#q, input[name="q"]');
+    if(q){ setTimeout(()=> q.focus(), 0); }
   }
   function closePanel(){
+    // Put the form back exactly where it was in the header
+    if(originalParent){
+      if(originalNext){ originalParent.insertBefore(form, originalNext); }
+      else { originalParent.appendChild(form); }
+    }
     panel.classList.remove('open');
     toggle.classList.remove('active');
     toggle.setAttribute('aria-expanded','false');
-    toggle.setAttribute('aria-pressed','false');
     document.removeEventListener('click', outsideClose);
     document.removeEventListener('keydown', escClose);
   }
@@ -327,8 +325,8 @@ document.addEventListener('DOMContentLoaded', function(){
     if(panel.classList.contains('open')) closePanel(); else openPanel();
   });
 
+  // On resize from mobile->desktop ensure the form is restored to header
   window.addEventListener('resize', function(){
-    if(!isMobile()) closePanel();
+    if(!isMobile() && panel.classList.contains('open')) closePanel();
   }, {passive:true});
-});
-</script></body></html>
+});</script></body></html>
